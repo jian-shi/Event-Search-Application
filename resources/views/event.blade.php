@@ -38,7 +38,7 @@
                 </ul>
             </div>
             <div class="col-sm col-md-4 d-none d-md-block">
-                    <img src="https://via.placeholder.com/220x180" alt="">
+                    <img src="https://via.placeholder.com/260x180" alt="">
             </div>
         </div>
         @endforeach
