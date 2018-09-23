@@ -25,7 +25,10 @@
         @foreach ($events as $event)
         <div class="row event-item">
             <div class="col-sm col-md-4">
-              <span>{{{ date('d-m-Y', strtotime($event->start))}}}</span>
+              <span>{{{ date('d M Y', strtotime($event->start))}}}</span> 
+              @if (date('d-m-Y', strtotime($event->start)) != date('d-m-Y', strtotime($event->finish)))
+              - {{{date('d M Y', strtotime($event->finish))}}}
+              @endif
               <h3>{{{ $event-> name}}}</h3>
             </div>
             <div class="col-sm col-md-4">
