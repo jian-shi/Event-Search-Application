@@ -28,7 +28,11 @@ $break-large: 1200px;
   border: 1px solid rgb(83, 83, 83);
   padding: 1rem;
   margin: 1rem;
+  .event-img{
+    text-align: center;
+  }
 }
+
 ul{
   padding-left: 0;
 }

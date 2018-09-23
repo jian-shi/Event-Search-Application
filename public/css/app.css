@@ -10498,6 +10498,10 @@ a.text-dark:focus {
   margin: 1rem;
 }
 
+.event-item .event-img {
+  text-align: center;
+}
+
 ul {
   padding-left: 0;
 }

@@ -37,7 +37,7 @@
                     <li><i class="far fa-clock"></i><b>Time: </b>{{{ date('H:i', strtotime($event->start))}}} - {{{ date('H:i', strtotime($event->finish))}}}</li>
                 </ul>
             </div>
-            <div class="col-sm col-md-4 d-none d-md-block">
+            <div class="col-sm col-md-4 d-none d-md-block event-img">
                     <img src="https://via.placeholder.com/260x180" alt="">
             </div>
         </div>
