@@ -10485,6 +10485,12 @@ a.text-dark:focus {
   margin-bottom: 15rem;
 }
 
+@media screen and (min-width: 1200px) {
+  .result {
+    padding: 5em;
+  }
+}
+
 .event-item {
   border: 1px solid #535353;
   padding: 1rem;

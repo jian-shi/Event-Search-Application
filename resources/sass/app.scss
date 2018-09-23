@@ -8,6 +8,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+$break-small: 320px;
+$break-large: 1200px;
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -16,6 +19,9 @@
 
 .result{
   margin-bottom: 15rem;
+  @media screen and (min-width: $break-large) {
+    padding: 5em;
+  }
 }
 .event-item{
   border: 1px solid rgb(83, 83, 83);

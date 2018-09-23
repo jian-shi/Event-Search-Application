@@ -10,25 +10,25 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     <body>
     @include( '/unchanged' )
- 
- <div class="row result">
-    <div class="col-md-10 offset-md-1">
+    <div class="result">
         @isset($message)
         <div class="row alert alert-primary" role="alert">{{$message}}</div>
         @endisset
         @isset($events)
         @foreach ($events as $event)
         <div class="row event-item">
-            <div class="col-md-4">
+            <div class="col-sm col-md-4">
               <span>{{{ date('d-m-Y', strtotime($event->start))}}}</span>
               <h3>{{{ $event-> name}}}</h3>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm col-md-4">
                 <p>{{{ $event-> description }}}</p>
                 <hr>
                 <ul>
@@ -37,15 +37,13 @@
                     <li><i class="far fa-clock"></i><b>Time: </b>{{{ date('H:i', strtotime($event->start))}}} - {{{ date('H:i', strtotime($event->finish))}}}</li>
                 </ul>
             </div>
-            <div class="col-md-4">
-                    <img src="https://via.placeholder.com/280x200" alt="">
+            <div class="col-sm col-md-4 d-none d-md-block">
+                    <img src="https://via.placeholder.com/220x180" alt="">
             </div>
         </div>
         @endforeach
         @endisset
     </div>
- </div>
- 
 <script type="text/javascript">
         fetch('http://localhost:8000/api/loccat')
         .then(function(response) {
