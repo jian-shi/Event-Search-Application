@@ -5,10 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Event Finder</title>
-
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
 
         <!-- Styles -->
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css"/>
@@ -55,8 +54,6 @@
         .then(function(myJson) {
             let location = myJson.data_location;
             let category = myJson.data_category;
-
-            console.log(location);
             
             let x = document.getElementsByName('location')[0];
             //x.multiple = true;

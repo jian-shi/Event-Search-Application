@@ -39,7 +39,7 @@ class ApiController extends Controller
             'data_category' => $category,
             'message' => ''
         ];
-
+        header('Access-Control-Allow-Origin: *');
         return response()->json($response, 200);
     }
 }
